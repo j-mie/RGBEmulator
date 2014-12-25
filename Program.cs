@@ -10,6 +10,7 @@ namespace RGBEmulator
     {
         static void Main(string[] args)
         {
+            RGBWindow.Window();
         }
     }
 }
