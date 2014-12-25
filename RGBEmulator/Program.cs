@@ -11,14 +11,15 @@ namespace RGBEmulator
     {
         static void Main(string[] args)
         {
-            RGBWindow.Window();
-
-            Listener listener = new Listener(23300);
 
             new Thread(() =>
             {
-                listener.Listen(RGBWindow.SetLED);
+                RGBWindow.Window();
             }).Start();
+
+            Listener listener = new Listener(23300);
+            
+            listener.Listen(RGBWindow.SetLED);
         }
     }
 }

@@ -24,11 +24,11 @@ namespace RGBEmulator
         {
             while (true)
             {
-                var index =  Convert.ToInt16(Encoding.ASCII.GetString(_udp.Receive(ref _endpoint)));
+                var index =  BitConverter.ToInt16(_udp.Receive(ref _endpoint), 0);
                 var r = _udp.Receive(ref _endpoint)[0];
                 var g = _udp.Receive(ref _endpoint)[0];
                 var b = _udp.Receive(ref _endpoint)[0];
-                var intensity = Convert.ToInt16(Encoding.ASCII.GetString(_udp.Receive(ref _endpoint)));
+                var intensity = BitConverter.ToInt16(_udp.Receive(ref _endpoint), 0);
 
                 action(index, r, g, b, intensity);
             }
