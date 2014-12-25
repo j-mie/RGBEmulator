@@ -21,6 +21,7 @@ namespace RGBEmulator
 
             return new Color((byte)r, (byte)g, (byte)b);
         }
+
         public static void Window()
         {
             Stopwatch watch = new Stopwatch();
@@ -29,7 +30,8 @@ namespace RGBEmulator
             ContextSettings contextSettings = new ContextSettings();
             contextSettings.DepthBits = 32;
 
-            RenderWindow window = new RenderWindow(new VideoMode(800, 800), "RGBEmulator");
+            RenderWindow window = new RenderWindow(new VideoMode(785, 785), "RGBEmulator");
+
             window.SetActive();
 
             var leds = new List<LED>();
