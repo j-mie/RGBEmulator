@@ -29,7 +29,7 @@ namespace RGBEmulator
 
         public void SetColour(Color color, int intensity)
         {
-            _led.FillColor = color;
+            _led.FillColor = new Color(color.R, color.G, color.B, 100);
 
             for (int i = 0; i <= 4; i++)
             {
@@ -45,12 +45,10 @@ namespace RGBEmulator
 
         public void Draw(RenderTarget target, RenderStates states)
         {
-            states = new RenderStates(BlendMode.Add);
-
             target.Draw(_led);
 
             foreach(var circle in _blendGlow)
-                target.Draw(circle, states);
+                target.Draw(circle);
         }
     }
 }
