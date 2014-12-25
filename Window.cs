@@ -62,7 +62,7 @@ namespace RGBEmulator
 
                 foreach (LED led in leds)
                 {
-                    led.SetColour(RandomColour());
+                    led.SetColour(RandomColour(), 4);
                     window.Draw(led);
                 }
 
