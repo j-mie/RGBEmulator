@@ -12,16 +12,13 @@ namespace RGBEmulator
 {
     class RGBWindow
     {
-        static Random random = new Random();
-        public static Color RandomColour()
+        private static List<LED> leds = new List<LED>();
+        public static void SetLED(int i, byte r, byte g, byte b, int intensity)
         {
-            int r = random.Next(0, 255);
-            int g = random.Next(0, 255);
-            int b = random.Next(0, 255);
-
-            return new Color((byte)r, (byte)g, (byte)b);
+            if (leds[i] != null)
+                leds[i].SetColour(new Color(r, g, b), intensity);
+            else throw new Exception("LED does not exist");
         }
-
         public static void Window()
         {
             Stopwatch watch = new Stopwatch();
@@ -33,8 +30,6 @@ namespace RGBEmulator
             RenderWindow window = new RenderWindow(new VideoMode(785, 785), "RGBEmulator");
 
             window.SetActive();
-
-            var leds = new List<LED>();
 
             for (int x = 0; x < 16; x++)
             {
@@ -64,7 +59,6 @@ namespace RGBEmulator
 
                 foreach (LED led in leds)
                 {
-                    led.SetColour(RandomColour(), 4);
                     window.Draw(led, new RenderStates(BlendMode.Add));
                 }
 

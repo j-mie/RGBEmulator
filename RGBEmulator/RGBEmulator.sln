@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDPTest", "UDPTest\UDPTest.csproj", "{86562872-F5AB-4F2E-ABDC-0EAC19A72E17}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RGBEmulator", "RGBEmulator\RGBEmulator.csproj", "{7E0181DB-4EEE-44EA-BC18-E25986571155}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RGBEmulator", "RGBEmulator.csproj", "{7E0181DB-4EEE-44EA-BC18-E25986571155}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{86562872-F5AB-4F2E-ABDC-0EAC19A72E17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{86562872-F5AB-4F2E-ABDC-0EAC19A72E17}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{86562872-F5AB-4F2E-ABDC-0EAC19A72E17}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{86562872-F5AB-4F2E-ABDC-0EAC19A72E17}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7E0181DB-4EEE-44EA-BC18-E25986571155}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7E0181DB-4EEE-44EA-BC18-E25986571155}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E0181DB-4EEE-44EA-BC18-E25986571155}.Release|Any CPU.ActiveCfg = Release|Any CPU

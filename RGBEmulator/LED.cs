@@ -23,13 +23,16 @@ namespace RGBEmulator
 
             for (int i = 0; i <= 4; i++)
             {
-                 _blendGlow.Add(new CircleShape(size));
+                var circle = new CircleShape(size);
+                circle.Position = location;
+
+                 _blendGlow.Add(circle);
             }
         }
 
         public void SetColour(Color color, int intensity)
         {
-            _led.FillColor = new Color(color.R, color.G, color.B, 100);
+            _led.FillColor = new Color(color.R, color.G, color.B, 45);
 
             for (int i = 0; i <= 4; i++)
             {
